@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Password Reset",
+    "content": "Users can reset their password by navigating to Settings > Security > Reset Password. Enter your registered email address and click 'Send Reset Link'. You will receive a password reset email within 5 minutes. The reset link expires after 24 hours. If you do not receive the email, check your spam or junk folder. You can also contact support at support@techflow.io for manual assistance. After resetting, you will be required to log in again on all devices."
+  },
+  {
+    "title": "Billing and Subscription Plans",
+    "content": "TechFlow offers three subscription tiers: Free, Pro ($29/month), and Enterprise ($99/month). The Free tier includes 5 projects, 1GB storage, and community support. The Pro tier includes unlimited projects, 50GB storage, priority email support, and access to advanced analytics. The Enterprise tier includes unlimited projects, 500GB storage, dedicated account manager, SSO, and SLA guarantees. You can upgrade or downgrade your plan at any time from Settings > Billing. Upgrades take effect immediately. Downgrades take effect at the next billing cycle. Refunds are available within 7 days of payment if you are unsatisfied. Annual plans receive a 20% discount."
+  },
+  {
+    "title": "API Rate Limits",
+    "content": "API rate limits are enforced per account per hour. Free tier accounts are limited to 100 requests per hour. Pro tier accounts are limited to 1,000 requests per hour. Enterprise accounts have a default limit of 10,000 requests per hour with the option to negotiate higher limits. Rate limit headers are included in every API response: X-RateLimit-Limit shows your total limit, X-RateLimit-Remaining shows remaining requests, and X-RateLimit-Reset shows the Unix timestamp when the limit resets. When you exceed the rate limit, you will receive a 429 Too Many Requests HTTP response. Implement exponential backoff in your application to handle rate limit errors gracefully. Contact sales@techflow.io for custom rate limit plans."
+  },
+  {
+    "title": "Two-Factor Authentication Setup",
+    "content": "Two-factor authentication (2FA) significantly improves account security by requiring a second verification step at login. To enable 2FA on your TechFlow account, go to Settings > Security > Two-Factor Authentication and click Enable. TechFlow supports authenticator apps such as Google Authenticator, Authy, and Microsoft Authenticator, as well as SMS-based verification. We strongly recommend using an authenticator app over SMS because SMS can be intercepted via SIM-swapping attacks. After enabling 2FA, you will be given 10 backup codes — store these in a safe place because they cannot be recovered if lost. Each backup code can only be used once. If you lose access to your 2FA device, use a backup code to log in and then reconfigure 2FA. Administrators can enforce 2FA for all workspace members from Settings > Security > Policies."
+  },
+  {
+    "title": "Data Export and Portability",
+    "content": "TechFlow respects your data ownership rights and allows full data export at any time. To export your data, navigate to Settings > Data > Export Data. You can export in JSON, CSV, or XML format. Small exports (under 50MB) are available for immediate download. Larger exports are processed asynchronously and you will receive an email notification with a download link within 1 hour. Download links expire after 48 hours. The export includes all your projects, tasks, comments, attachments, and account settings. Enterprise customers can also automate exports using the Data Export API endpoint at POST /api/v1/exports. GDPR data subject requests can be fulfilled through the same export interface. Deleted data is not included in exports; if you need recovery of recently deleted data, contact support within 30 days of deletion."
+  },
+  {
+    "title": "Integrations and Connected Apps",
+    "content": "TechFlow integrates with a wide range of third-party tools to fit into your existing workflow. Available integrations include Slack (real-time notifications), GitHub (link commits and PRs to tasks), Jira (bi-directional task sync), Zapier (no-code automation with 5000+ apps), Salesforce (CRM sync), Google Drive (attach Drive files), and Figma (embed designs). To set up an integration, go to Settings > Integrations, select the app you want to connect, and follow the OAuth authorization flow. Webhook-based integrations are available on Pro and Enterprise plans only. You can send real-time event notifications to any HTTPS endpoint by configuring webhooks under Settings > Integrations > Webhooks. Custom integrations can be built using the TechFlow REST API. API keys are managed under Settings > Developer > API Keys."
+  },
+  {
+    "title": "Team Roles and Permissions",
+    "content": "TechFlow has a role-based access control system with four roles: Owner, Admin, Member, and Viewer. The Owner role is assigned to the workspace creator and has full control including billing management, workspace deletion, and all admin permissions. Admins can manage team members, configure workspace settings, manage integrations, and access all projects. Members can create, edit, and delete their own projects and tasks, and collaborate on projects they are added to. Viewers have read-only access to projects they are explicitly added to. To invite a new team member, go to Settings > Team > Invite Member and enter their email address. They will receive an invitation email valid for 7 days. You can also invite external guests to specific projects without giving them full workspace access — use the Share button on any project and enter the guest's email."
+  },
+  {
+    "title": "File Storage and Management",
+    "content": "All files uploaded to TechFlow are encrypted at rest using AES-256 and in transit using TLS 1.3. The maximum file size per upload is 100MB. Supported file types include images (PNG, JPG, JPEG, GIF, WebP, SVG), documents (PDF, DOCX, XLSX, PPTX, TXT, MD), archives (ZIP, TAR, GZ), and code files (JSON, YAML, CSV, XML). Files are organized per project and can be further sorted into folders. To upload a file, drag and drop it onto the project workspace or use the paperclip icon in the task editor. Deleted files are moved to the project Trash and permanently removed after 30 days. You can restore files from Trash before that deadline. Storage usage is visible at Settings > Storage. If you exceed your plan's storage limit, uploads will be blocked until you free up space or upgrade your plan."
+  }
+]
